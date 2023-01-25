@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="./style.css">
+		<title>Discount calculator</title>
+	</head>
+	<body>
+		<h1>Discount calculator</h1>
+		<form action="">
+			<label for="Pname">Product Name: </label>
+			<input type="text" id="Pname" name="Pname"><br>
+			<label for="amount">Amount: </label>
+			<input type="number" id="amount" min="0" name="amount" onchange="getAmount(this)"><br>
+			<label for="membership">Are you a member of Membership? </label>
+			<input type="checkbox" id="member" name="member" value=""><br>
+			<label for="level" id="textLevel">Membership Level? </label>
+			<select name="level" id="level" onchange="getSelectValue(this)">
+				<option selected>--selection--</option>
+				<option value="5" id="Lv1">Lv 1</option>
+				<option value="10" id="Lv2">Lv 2</option>
+				<option value="15" id="Lv3">Lv 3</option>
+			</select><br>
+		</form>
+		<hr class="rended">
+		<time datetime=""></time>
+		<!-- <p id="value"></p> -->
+		<dl class="item">
+			<dd >*Product Name: <p id="product"></p></dd>
+			<dd >*Cost: <p id="cost"></p></dd>
+			<dd >*Discount: <p id="discount"></p></dd>
+		</dl>
+	</body>
+	<script src="./calc.js"></script>
+</html>

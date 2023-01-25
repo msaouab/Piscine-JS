@@ -1,0 +1,11 @@
+.item dd {
+	display: flex;
+    gap: 0.5rem;
+    justify-items: center;
+    align-items: center;
+}
+
+dd p{
+	margin: 0;
+}
+
