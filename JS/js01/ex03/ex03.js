@@ -6,8 +6,7 @@
 
 let item = document.querySelectorAll('li');
 
-// for (let x in item)
-item.forEach(function(item) {
+item.forEach(function (item) {
 	item.addEventListener('click', function () {
 		alert(item.textContent);
 		console.log(item);

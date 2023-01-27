@@ -61,3 +61,7 @@ progress::-webkit-progress-value {
 .wash {
 
 }
+
+div {
+	border: 1px solid red;
+}
