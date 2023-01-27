@@ -1,0 +1,77 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	border: 1px solid black;
+	padding: 10px 0;
+	text-align: center;
+	font-size: 3vw;
+	margin: 2rem;
+}
+
+main {
+	border: 1px solid black;
+	margin: 2rem;
+	padding: 1rem;
+}
+
+form {
+	display: flex;
+	/* flex-wrap: wrap; */
+	gap: 3px;
+}
+
+/* input {
+	margin: 0;
+	padding: 10px 0;
+} */
+
+#todo {
+	width: 100%;
+	border: 1px solid #ccc;
+}
+
+#myBtn {
+	font-size: medium;
+	padding: 1rem 1.4rem;
+	background-color: #4CAF50;
+	color: white;
+}
+
+#todo, #myBtn, #delete, #edit {
+	border-radius: 5px;
+	box-sizing: border-box;
+}
+
+ul {
+}
+
+div {
+	display: flex;
+	gap: 3px;
+	border-bottom: 1px solid black;
+}
+
+div > li {
+	width: 100%;
+	list-style-type: none;
+	cursor: pointer;
+	font-size: 20px;
+	padding: 7px 5px 0 5px;
+}
+
+#delete, #edit {
+	font-size: medium;
+	padding: 5px;
+	margin: 5px;
+	border: 1px solid ;
+}
+
+button i {
+}
+
+#myBtn:hover {
+	background-color: #45a049;
+}
