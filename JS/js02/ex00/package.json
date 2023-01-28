@@ -1,0 +1,17 @@
+{
+	"name": "ex00",
+	"version": "1.0",
+	"start": "node main.js",
+	"main": "Piscine-JS/JS/js02/ex00/main.js",
+	"description": "",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/msaouab/Piscine-JS"
+	},
+	"author": "saouab mohamed msaouab",
+	"contributes": {
+		"name": "saouab mohamed",
+		"email": "saouab.mohamed@gmail.com"
+	},
+	"type": "module"
+}
