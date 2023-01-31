@@ -1,72 +1,67 @@
 
-function	randomFail() {
-	if (Math.random() < 0.2)
-		throw "Production failed..!(The salary was cut ㅜㅜ)";
+function randomFail() {
+	if (Math.random() < 0.2) throw "Production failed..!(The salary was cut ㅜㅜ)";
 }
 
-const MakingDough = () => {
-	setTimeout( () => {
-		try {
-			randomFail();
-			console.log ('Make the dough - 3 seconds')
-			Primary();
-		}
-		catch (error) {
-			console.log(error);
-			MakingDough();
-		}
-	}, 3000);
+function	fry(timer) {
+	try {
+		randomFail()
+		console.log('5 - Fry at 5 seconds has been success');
+		console.log('Operations has finish');
+	} catch (error) {
+		console.log(error);
+		fry(timer);
+	}
 }
 
-const Primary = () => {
-	setTimeout(() => {
+function	secondFerm(timer) {
+	try {
+		randomFail()
+		console.log('4 - Second fermentation at 2 seconds has been success');
+		fry(5000)
+	} catch (error) {
+		console.log(error);
+		secondFerm(timer);
+	}
+}
+
+function	Molding(timer) {
+	let	timeId = setTimeout(() => {
 		try {
-			randomFail();
-			console.log('Primary fermentation - 5 seconds')
-			Molding();
+			randomFail()
+			console.log('3 - Molding at 4.2 seconds has been succes');
+			secondFerm(2000)
 		} catch (error) {
 			console.log(error);
-			Primary();
+			Molding(timer);
 		}
-	}, 5000);
+	}, timer);
 }
 
-const Molding = () => {
-	setTimeout(() => {
+function	firstFerm(timer) {
+	let	timeId = setTimeout(() => {
 		try {
-			randomFail();
-			console.log('Molding - 4.2 seconds');
-			Seconds();
+			randomFail()
+			console.log('2 - Primary fermentation at 5 seconds has been succes');
+			Molding(4200)
 		} catch (error) {
 			console.log(error);
-			Molding();
+			firstFerm(timer);
 		}
-	}, 4200);
+	}, timer);
 }
 
-const Seconds = () => {
-	setTimeout(() => {
+function	MakeDough(timer) {
+	let timeId = setTimeout(() => {
 		try {
-			randomFail();
-			console.log('Seconds fermentation - 5 seconds');
-			Fry();
+			randomFail()
+			console.log('1 - Make the dough at 3 seconds has been succes');
+			firstFerm(5000);
 		} catch (error) {
 			console.log(error);
-			Seconds();
+			MakeDough(timer)
 		}
-	}, 2000);
+	}, timer);
 }
 
-const Fry = () => {
-	setTimeout(() => {
-		try {
-			randomFail();
-			console.log('Fry - 5 seconds');
-		} catch (error) {
-			console.log(error);
-			Fry();
-		}
-	}, 5000);
-}
-
-MakingDough();
+MakeDough(3000)
