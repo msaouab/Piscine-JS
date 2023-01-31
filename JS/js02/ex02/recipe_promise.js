@@ -1,35 +1,33 @@
 
-function	succes() {
-	return (Math.random() * 10 > 2);
+function randomFail() {
+	return ((Math.random() * 10) < 2)
 }
 
-const jaeskim = (job, time) => {
-	let myPromise = new Promise(function(myResolve, myReject) {
-		const intervalId = setInterval(() => {
-			if (succes()) {
-				myResolve(`${job} success`);
-				clearInterval(intervalId)
-			}
+const Operations = (oper, timer) => {
+	return new Promise((resolve) => {
+		let intervalId = setInterval(() => {
+			if (randomFail())
+				console.log('Production failed..!(The salary was cut ㅜㅜ)');
 			else {
-				console.log(`${job} failed in the process`)
+				resolve(oper);
+				clearInterval(intervalId);
 			}
-		}, time);
+		}, timer);
 	})
-	return myPromise;
 }
 
-jaeskim('MakingDough', 3000).then(myResolve => {
-	console.log(myResolve);
-	return jaeskim('Primary', 5000);
-}).then(myResolve => {
-	console.log(myResolve);
-	return jaeskim('Molding', 4200);
-}).then(myResolve => {
-	console.log(myResolve);
-	return jaeskim('Seconds', 2000);
-}).then(myResolve => {
-	console.log(myResolve)
-	return jaeskim('Fry', 5000);
-}).then(myResolve => {
-	console.log(myResolve);
-})
+Operations('1 - Make the dough has been succes', 1000).then(resolve =>  {
+	console.log(resolve);
+	return Operations('2 - Primary fermentation has been succes', 5000);
+}).then(resolve => {
+	console.log(resolve);
+	return Operations('3 - Molding has been succes', 4200);
+}).then(resolve => {
+	console.log(resolve);
+	return Operations('4 - Second fermentation has been success', 2000);
+}).then(resolve => {
+	console.log(resolve);
+	return Operations('5 - Fry has been success', 5000);
+}).then(resolve => {
+	console.log(resolve);
+});
