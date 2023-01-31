@@ -1,12 +1,11 @@
 
-export function	setTimer(callback, interval) {
+export function	setTimer(callback, timer) {
 	let count = 0;
-	const timeoutId = setTimeout(function run() {
-		if (!callback(count))
-			clearTimeout(timeoutId);
-		else {
+
+	let timeId = setTimeout(function go() {
+		if (callback(count)) {
+			setTimeout(go, timer)
 			count++;
-			setTimeout(run, interval)
 		}
-	}, interval)
+	}, timer);
 }
