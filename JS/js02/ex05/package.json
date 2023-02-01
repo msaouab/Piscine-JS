@@ -1,0 +1,23 @@
+{
+	"name": "42placeholder",
+	"version": "5.0",
+	"scripts": {
+		"start": "node main.js"
+	},
+	"main": "main.js",
+	"description": "Create a programme to practice fetching data from API",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/msaouab/Piscine-JSJS/js02/ex05"
+	},
+	"author": "Saouab mohamed 'msaouab'",
+	"contributes": {
+		"name": "mohamed saouab",
+		"email": "saouab.mohamed@gmail.com"
+	},
+	"type": "commonjs",
+	"dependencies": {
+		"axios": "^1.3.0",
+		"node": "^18.13.0"
+	}
+}
