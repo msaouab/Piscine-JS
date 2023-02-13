@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Quicksand';
+	overflow: hidden;
+}
+
+.container {
+	min-height: 10vh;
+	width: 50vw;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 1rem;
+}
+
+h1 {
+	font-size: 4rem;
+}
+
+.inputFilled {
+	display: flex;
+	gap: .2rem;
+	align-items: center;
+	justify-content: center;
+	height: 2.5rem;
+	width: 100%;
+}
+
+input {
+	padding: 10px;
+	width: 50%;
+	border-radius: 5px;
+	border: 1px solid gray;
+}
+
+button {
+	padding: 6px 20px;
+	font-size: 20px;
+	border: none;
+	border-radius: 5px;
+	background-color: #4CAF50;
+	color: white;
+	cursor: pointer;
+}
+
+.myList {
+}
+
+ul {
+	position: relative;
+	width: 65%;
+	margin-bottom: 2rem;
+	overflow-y: auto;
+	height: 50.8rem;
+}
+
+ul li {
+	padding: .5rem;
+	border-bottom: 1px solid black;
+	cursor: pointer;
+	width: 80%;
+	overflow-x: auto;
+	display: flex;
+	flex-direction: column;
+}
+
+svg {
+	width: 22px;
+	position: absolute;
+	cursor: pointer;
+}
+
+.delete {
+	right: .2rem;
+}
+
+.edit {
+	right: 1.6rem;
+}
