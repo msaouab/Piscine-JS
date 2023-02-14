@@ -36,6 +36,7 @@ input {
 	width: 50%;
 	border-radius: 5px;
 	border: 1px solid gray;
+	outline: none;
 }
 
 button {
@@ -43,12 +44,9 @@ button {
 	font-size: 20px;
 	border: none;
 	border-radius: 5px;
-	background-color: #4CAF50;
 	color: white;
 	cursor: pointer;
-}
-
-.myList {
+	background-color: #53d057;
 }
 
 ul {
@@ -62,11 +60,12 @@ ul {
 ul li {
 	padding: .5rem;
 	border-bottom: 1px solid black;
-	cursor: pointer;
 	width: 80%;
 	overflow-x: auto;
 	display: flex;
 	flex-direction: column;
+	border: 1px solid;
+	margin-left: 1rem;
 }
 
 svg {
@@ -81,4 +80,12 @@ svg {
 
 .edit {
 	right: 1.6rem;
+}
+
+button:hover {
+	background-color: #4CAF50;
+}
+
+button:disabled {
+	background-color: #53d057;
 }

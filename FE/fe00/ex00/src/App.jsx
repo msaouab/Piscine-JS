@@ -11,6 +11,11 @@ function App() {
 		setInput(e.target.value);
 	}
 	const AddItem = (e) => {
+		const check = todo.includes(input);
+		if (check) {
+			alert('Item already exists in list');
+			return ;
+		}
 		if (input.length !== 0)
 			todo.unshift(input);
 		setInput('');
@@ -46,9 +51,10 @@ function App() {
 						placeholder='Enter your Todo list...'
 						onChange={handleOnChange}
 						autoComplete="off"
-					/>
+						/>
 					<button
 						type="submit"
+						disabled={!input}
 						onClick={AddItem}>Add
 					</button>
 				</div>
@@ -60,7 +66,6 @@ function App() {
 								<input
 									type="text"
 									name=""
-									id=""
 									value={item}
 									onChange={(event) => EditItem(event, id)} />
 								<button type="submit">Done</button>
